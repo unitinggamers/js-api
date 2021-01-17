@@ -1,9 +1,9 @@
 {
   "name": "@uniting-gamers/js-api",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
   "scripts": {
-    "build": "tsc"
+    "build": "tsc --p tsconfig.json"
   },
   "dependencies": {
     "isomorphic-unfetch": "3.0.0",
@@ -21,5 +21,7 @@
     "eslint-plugin-prettier": "3.1.4",
     "prettier": "^2.0.5",
     "typescript": "~3.9.5"
-  }
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts"
 }
