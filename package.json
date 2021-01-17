@@ -1,15 +1,16 @@
 {
   "name": "@uniting-gamers/js-api",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": false,
   "scripts": {
-    "build": "tsc --p tsconfig.json"
+    "build": "yarn run clean && tsc --p tsconfig.json",
+    "clean": "rimraf dist"
   },
   "dependencies": {
-    "isomorphic-unfetch": "3.0.0",
+    "isomorphic-unfetch": "^3.0.0",
     "lodash": "^4.17.20",
-    "snake-case": "3.0.3",
-    "swr": "0.2.3"
+    "snake-case": "^3.0.3",
+    "swr": "^0.2.3"
   },
   "devDependencies": {
     "@shopify/eslint-plugin": "^37.0.0",
@@ -20,8 +21,15 @@
     "eslint-config-prettier": "6.11.0",
     "eslint-plugin-prettier": "3.1.4",
     "prettier": "^2.0.5",
+    "rimraf": "^3.0.2",
     "typescript": "~3.9.5"
   },
   "main": "dist/index.js",
-  "types": "dist/index.d.ts"
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/*",
+    "!tsconfig.tsbuildinfo",
+    "index.js",
+    "index.d.ts"
+  ]
 }
